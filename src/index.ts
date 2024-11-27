@@ -13,7 +13,6 @@ app.use(express.json())
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/admin", adminRouter);
 
-
 ;(async () => {
     await mongoose.connect(`${process.env.MONGO_URL}/100xDevs`)
     console.log("🌞 Server connected")
