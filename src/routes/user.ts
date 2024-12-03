@@ -74,7 +74,7 @@ router.post("/signin", async (req: Request, res: Response) => {
 })
 
 router.get("/preview", async (req, res) => {
-    const courses = await  Course.find({}).select("-updatedBy -createdBy")
+    const courses = await Course.find({}).select("-updatedBy -createdBy")
     res.json({ courses })
 })
 
